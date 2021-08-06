@@ -9,8 +9,8 @@ public class ContactDetails {
     private String lastName;
     private String addressCity;
     private String state;
-    private int zip;
-    private int phoneNumber;
+    private long zip;
+    private long phoneNumber;
     private String email;
 //Getter Setter Method
     public String getFirstName() {
@@ -37,16 +37,16 @@ public class ContactDetails {
     public void setState(String state) {
         this.state = state;
     }
-    public int getZip() {
+    public long getZip() {
         return zip;
     }
-    public void setZip(int zip) {
+    public void setZip(long zip) {
         this.zip = zip;
     }
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
     public String getEmail() {
