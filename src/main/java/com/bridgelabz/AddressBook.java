@@ -51,9 +51,5 @@ public void editContact(){
     else
             System.out.println("The Entered First Name Is Not Match");
     editContact();
-
-
-}
-
-
+    }
 }
