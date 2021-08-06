@@ -52,4 +52,18 @@ public void editContact(){
             System.out.println("The Entered First Name Is Not Match");
     editContact();
     }
+/*
+Declaring The Delete Contact Method
+TO Details The Details Of Contact
+The Details Of Contact Delete By Using FirstName
+ */
+public void deleteContact() {
+    System.out.println("Enter firstName of the person");
+    String editName = sc.nextLine();
+    if (editName.equals(person.getFirstName())) {
+        System.out.println("Deleted " + person.getFirstName() + " details");
+        person = null;
+        }
+    }
 }
+
