@@ -8,8 +8,9 @@ Declaring The Add Contact Method
 And Entering The Contact Details By Using Scanner Class
 And Printing The Contact Details Of Person
  */
+ContactDetails person = new ContactDetails();
 public void addContact(){
-    ContactDetails person = new ContactDetails();
+   // ContactDetails person = new ContactDetails();
     System.out.println("Enter First Name: ");
     String firstName = sc.nextLine();
     System.out.println("Enter last Name: ");
@@ -35,4 +36,24 @@ public void addContact(){
     person.setEmail(email);
     System.out.println("The Details Of Contact Is : " +person);
     }
+/*
+Declaring The Edit Contact Method
+TO Edit The Details Of Contact
+The Details Of Contact Edit By Using FirstName
+If First Name Is Match The Contact Will Edit
+ */
+public void editContact(){
+    //Scanner editName = new Scanner(System.in);
+    System.out.println("Enter the firstName of person");
+    String editName = sc.nextLine();
+    if(editName.equalsIgnoreCase(person.getFirstName()))
+        addContact();
+    else
+            System.out.println("The Entered First Name Is Not Match");
+    editContact();
+
+
+}
+
+
 }
