@@ -76,20 +76,32 @@ public class ContactDetails {
     public void setEmail(String email) {
         this.email = email;
     }
+    public boolean equals(Object object) {
+        boolean result = false;
+        if (object == this) {
+            return true;
+        }
+        ContactDetails contact = (ContactDetails) object;
+        if (contact.firstName.equals(this.firstName) && contact.lastName.equals(this.lastName)) {
+            result = true;
+        }
+        return result;
+    }
     /*
     Declaring The To String Method
     The toString() method returns the string representation of the object
     */
-    public String toString() {
-        return "Contact{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                '}';
+        public String toString () {
+            return "Contact{" +
+                    "firstName='" + firstName + '\'' +
+                    ", lastName='" + lastName + '\'' +
+                    ", address='" + address + '\'' +
+                    ", city='" + city + '\'' +
+                    ", state='" + state + '\'' +
+                    ", zip=" + zip +
+                    ", phoneNumber=" + phoneNumber +
+                    ", email='" + email + '\'' +
+                    '}';
+        }
+
     }
-}

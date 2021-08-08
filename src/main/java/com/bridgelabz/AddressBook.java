@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class AddressBook {
     public String name;
     Scanner sc = new Scanner(System.in);
+
     /*
     Declaring The Add Contact Method
     And Entering The Contact Details By Using Scanner Class
@@ -13,27 +14,43 @@ public class AddressBook {
     public AddressBook(String name) {
         this.name = name;
     }
+
     public ArrayList<ContactDetails> getAddressBook() {
         return contactList;
     }
+
     ArrayList<ContactDetails> contactList = new ArrayList<>();
     /*
-    Declaring The Add Contact Method
-    And Entering The Contact Details By Using Scanner Class
-    And Printing The Contact Details Of Person
-    */
-    public void addContact(ContactDetails contact) {
-        for (ContactDetails value : contactList) {
-            if (value.equals(contact)) {
-                System.out.println("The person already exists!!!");
+    Declaring check Duplicate Entry Method
+    Checking For Duplicate Entries By Using Boolean Type
+     */
+    public boolean checkDuplicateEntry(ContactDetails contact) {
+        boolean check = false;
+        for (ContactDetails duplicateEntry : contactList) {
+            if (duplicateEntry.equals(contact)) {
+                check = true;
+            } else {
+                check = false;
             }
         }
-        contactList.add(contact);
-        System.out.println("ADDRESS BOOK---> " + contactList);
-        for (ContactDetails contact1 : contactList) {
-            System.out.println("CONTACT LIST---> " + contact1);
-        }
+        return check;
     }
+
+    /*
+    Declaring The Add Contact Method
+    If Duplicate Entry Is Possible It Prints Person Already Exists
+    And Printing The Contact Details Of Person
+    */
+    public boolean addContact(ContactDetails contact) {
+        boolean entryCheck= checkDuplicateEntry(contact);
+        if (!entryCheck) {
+            contactList.add(contact);
+            System.out.println("Contact added successfully!!");
+        } else {
+            System.out.println("The person already exists!!!");
+        }System.out.println("Address Book Data : " +contactList);
+        return true;
+}
     /*
     Declaring The Edit Contact Method
     TO Edit The Details Of Contact
