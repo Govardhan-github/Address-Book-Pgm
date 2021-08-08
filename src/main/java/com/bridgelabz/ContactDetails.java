@@ -8,44 +8,49 @@ public class ContactDetails {
     //variable Declaration
     private String firstName;
     private String lastName;
-    private String addressCity;
+    private String address;
+    private String city;
     private String state;
+    private String zip;
+    private String phoneNumber;
     private String email;
-    private Long zip;
-    private Long phoneNumber;
-/*
-Declaring The Parametrised Constructor
-To Initialise The Parameters
- */
-public ContactDetails(String firstName, String lastName, String addressCity, String state,String email, Long zip, Long phoneNumber ) {
-    super();
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.addressCity = addressCity;
-    this.state = state;
-    this.email = email;
-    this.zip = zip;
-    this.phoneNumber = phoneNumber;
-}
-public ContactDetails() {
-}
-    public String getFirstName() {
-    return firstName;
+    /*
+    Declaring The Parametrised Constructor
+    To Initialise The Parameters
+    */
+    ContactDetails(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
-    public void setFirstName(String firstName){
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
     public String getLastName() {
-    return lastName;
+        return lastName;
     }
     public void setLastName(String lastName) {
-    this.lastName = lastName;
+        this.lastName = lastName;
     }
-    public String getAddressCity() {
-    return addressCity;
+    public String getAddress() {
+        return address;
     }
-    public void setAddressCity(String addressCity) {
-    this.addressCity = addressCity;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
     }
     public String getState() {
         return state;
@@ -53,38 +58,38 @@ public ContactDetails() {
     public void setState(String state) {
         this.state = state;
     }
+    public String getZip() {
+        return zip;
+    }
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
     public String getEmail() {
         return email;
     }
     public void setEmail(String email) {
-    this.email =email;
-    }
-    public long getZip() {
-        return zip;
-    }
-    public void setZip(long zip) {
-        this.zip = zip;
-    }
-    public long getPhoneNumber() {
-        return phoneNumber;
-    }
-    public void setPhoneNum(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
     /*
-Declaring The To String Method
-The toString() method returns the string representation of the object
- */
-    @Override
+    Declaring The To String Method
+    The toString() method returns the string representation of the object
+    */
     public String toString() {
-        return "ContactDetails{" +
+        return "Contact{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", addressCity='" + addressCity + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", email='" + email + '\'' +
                 ", zip=" + zip +
                 ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
