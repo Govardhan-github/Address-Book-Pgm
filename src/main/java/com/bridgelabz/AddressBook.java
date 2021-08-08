@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class AddressBook {
     public String name;
     Scanner sc = new Scanner(System.in);
+
     /*
     Declaring The Add Contact Method
     And Entering The Contact Details By Using Scanner Class
@@ -13,10 +14,13 @@ public class AddressBook {
     public AddressBook(String name) {
         this.name = name;
     }
+
     public ArrayList<ContactDetails> getAddressBook() {
         return contactList;
     }
+
     ArrayList<ContactDetails> contactList = new ArrayList<>();
+
     /*
     Declaring The Add Contact Method
     And Entering The Contact Details By Using Scanner Class
@@ -34,6 +38,7 @@ public class AddressBook {
             System.out.println("CONTACT LIST---> " + contact1);
         }
     }
+
     /*
     Declaring The Edit Contact Method
     TO Edit The Details Of Contact
@@ -101,6 +106,7 @@ public class AddressBook {
             }
         }
     }
+
     /*
 Declaring The Delete Contact Method
 TO Details The Details Of Contact
@@ -112,10 +118,12 @@ The Details Of Contact Delete By Using FirstName
             checkName2 = contact.getFirstName();
             System.out.println(checkName2);
             if (firstName.equalsIgnoreCase(checkName2)) {
-                contactList.remove(contact);
-                System.out.println("Contact name " + firstName + "deleted successfully from the contact list");
-            } else {
-                System.out.println("No any user belongs to this " + firstName + "  Try Again !!");
+                try {
+                    contactList.remove(contact);
+                    System.out.println("Contact name " + firstName + "deleted successfully from the contact list");
+                } catch (Exception e) {
+                    System.out.println("No any user belongs to this " + firstName + "  Try Again !!");
+                }
             }
         }
     }
