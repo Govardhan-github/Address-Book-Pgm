@@ -62,7 +62,7 @@ public class AddressBookMain {
         Scanner scanner = new Scanner(System.in);
         int choice;
         do {
-            System.out.println("1. Add new contact" + "\n" + "2. Edit contact details" + "\n" + "3. Delete contact details" + "\n" +  "4. Search person By City " + "\n" + "5.Show Contacts" + "\n" + "6.View Contact In City"+ "\n"+"7.Count Contacts By City "+"\n" +"8.Sorting By Name"+ "\n" + "9. Exit" + "\n" + "Enter your choice:");
+            System.out.println("1. Add new contact" + "\n" + "2. Edit contact details" + "\n" + "3. Delete contact details" + "\n" +  "4. Search person By City " + "\n" + "5.Show Contacts" + "\n" + "6.View Contact In City"+ "\n"+"7.Count Contacts By City "+"\n" +"8.Sorting By Name"+ "\n" +"9.Sorting By City"+"\n"+ "10. Exit" + "\n" + "Enter your choice:");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -109,14 +109,19 @@ public class AddressBookMain {
                     System.out.println("Enter The Name Of City Of Contact");
                     String cityName1 = scanner.next();
                     viewPersonByCity(cityName1);
+                    break;
                 case 7:
                     System.out.println("Enter The Name Of City");
                     String cityName2 = scanner.next();
                     countContactsByUsingCity(cityName2);
-
+                    break;
                 case 8:
                    sortByName();
+                   break;
+                case 9 :
+                    sortByCity();
+                    break;
             }
-        } while(choice != 9);
+        } while(choice != 10);
     }
 }
