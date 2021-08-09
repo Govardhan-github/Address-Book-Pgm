@@ -100,13 +100,11 @@ public class AddressBookMain {
                     String firstName= scanner.next();
                     searchPersonByCity(cityName,firstName);
                     break;
-
                 case 5:
                     System.out.println(Collections.singletonList(addressBookHashMap));
                     for (Map.Entry<String,AddressBook> entry : addressBookHashMap.entrySet()) {
                         System.out.println(entry.getKey() + entry.getValue().getAddressBook()); }
                     break;
-
                 case 6:
                     System.out.println("Enter The Name Of City Of Contact");
                     String cityName1 = scanner.next();
@@ -115,7 +113,6 @@ public class AddressBookMain {
                     System.out.println("Enter The Name Of City");
                     String cityName2 = scanner.next();
                     countContactsByUsingCity(cityName2);
-
             }
         } while(choice != 8);
     }
