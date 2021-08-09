@@ -103,5 +103,4 @@ public class ContactDetails {
                     ", email='" + email + '\'' +
                     '}';
         }
-
     }

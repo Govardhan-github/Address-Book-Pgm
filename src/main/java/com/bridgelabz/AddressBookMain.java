@@ -1,10 +1,8 @@
 package com.bridgelabz;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
+import static com.bridgelabz.AddressBook.searchPersonByCity;
 /*
-Declaring AddressBook Class Here
+Declaring AddressBookMain Class Here
 Adding Hash Map To The Every Contact
 And Printing The Contact Details
  */
@@ -62,7 +60,7 @@ public class AddressBookMain {
         Scanner scanner = new Scanner(System.in);
         int choice;
         do {
-            System.out.println("1. Add new contact" + "\n" + "2. Edit contact details" + "\n" + "3. Delete contact details" + "\n" +  "4. Show Contacts " + "\n" + "5. Exit" + "\n" + "Enter your choice:");
+            System.out.println("1. Add new contact" + "\n" + "2. Edit contact details" + "\n" + "3. Delete contact details" + "\n" +  "4. Search person By City " + "\n" + "5.Show Contacts" + "\n" + "6. Exit" + "\n" + "Enter your choice:");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -95,11 +93,18 @@ public class AddressBookMain {
                     }
                     break;
                 case 4:
+                    System.out.println("Enter CityName , First Name you want to search:");
+                    String cityName = scanner.next();
+                    String firstName= scanner.next();
+                    searchPersonByCity(cityName,firstName);
+                    break;
+
+                case 5:
                     System.out.println(Collections.singletonList(addressBookHashMap));
                     for (Map.Entry<String,AddressBook> entry : addressBookHashMap.entrySet()) {
                         System.out.println(entry.getKey() + entry.getValue().getAddressBook()); }
                     break;
             }
-        } while(choice != 5);
+        } while(choice != 6);
     }
 }

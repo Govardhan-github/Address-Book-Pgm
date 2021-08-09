@@ -1,11 +1,12 @@
 package com.bridgelabz;
 //Importing java packages
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 public class AddressBook {
     public String name;
     Scanner sc = new Scanner(System.in);
-
     /*
     Declaring The Add Contact Method
     And Entering The Contact Details By Using Scanner Class
@@ -14,12 +15,10 @@ public class AddressBook {
     public AddressBook(String name) {
         this.name = name;
     }
-
     public ArrayList<ContactDetails> getAddressBook() {
         return contactList;
     }
-
-    ArrayList<ContactDetails> contactList = new ArrayList<>();
+    static ArrayList<ContactDetails> contactList = new ArrayList<>();
     /*
     Declaring check Duplicate Entry Method
     Checking For Duplicate Entries By Using Boolean Type
@@ -35,7 +34,16 @@ public class AddressBook {
         }
         return check;
     }
-
+    /*
+    Declaring Search Person By City And FirstName
+    Using Java Streams To Search By using CityName And FirstName
+     */
+    public static void searchPersonByCity(String cityName, String firstName) {
+        List<ContactDetails> personList =contactList.stream().filter(p -> p.getCity().equalsIgnoreCase(cityName)).filter(p -> (p.getFirstName()).equalsIgnoreCase(firstName)).collect(Collectors.toList());
+            for (ContactDetails contact : personList) {
+                System.out.println("Search result: " + contact);
+            }
+        }
     /*
     Declaring The Add Contact Method
     If Duplicate Entry Is Possible It Prints Person Already Exists
