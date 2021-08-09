@@ -1,7 +1,7 @@
 package com.bridgelabz;
 import java.util.*;
-import static com.bridgelabz.AddressBook.searchPersonByCity;
-import static com.bridgelabz.AddressBook.viewPersonByCity;
+
+import static com.bridgelabz.AddressBook.*;
 
 /*
 Declaring AddressBookMain Class Here
@@ -62,7 +62,7 @@ public class AddressBookMain {
         Scanner scanner = new Scanner(System.in);
         int choice;
         do {
-            System.out.println("1. Add new contact" + "\n" + "2. Edit contact details" + "\n" + "3. Delete contact details" + "\n" +  "4. Search person By City " + "\n" + "5.Show Contacts" + "\n" + "6.View Contact In City"+ "\n" +"7. Exit" + "\n" + "Enter your choice:");
+            System.out.println("1. Add new contact" + "\n" + "2. Edit contact details" + "\n" + "3. Delete contact details" + "\n" +  "4. Search person By City " + "\n" + "5.Show Contacts" + "\n" + "6.View Contact In City"+ "\n"+"7.Count Contacts By City "+"\n" +"8. Exit" + "\n" + "Enter your choice:");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -111,7 +111,12 @@ public class AddressBookMain {
                     System.out.println("Enter The Name Of City Of Contact");
                     String cityName1 = scanner.next();
                     viewPersonByCity(cityName1);
+                case 7:
+                    System.out.println("Enter The Name Of City");
+                    String cityName2 = scanner.next();
+                    countContactsByUsingCity(cityName2);
+
             }
-        } while(choice != 7);
+        } while(choice != 8);
     }
 }

@@ -55,6 +55,19 @@ public class AddressBook {
         }
     }
     /*
+   Declaring The Count Contacts Method By City Name
+   Using Java Streams To Count The Contacts By using City Name
+    */
+    public static void countContactsByUsingCity(String cityName2) {
+        long count=0;
+        long count1 = contactList.stream().filter(g -> g.getCity().equalsIgnoreCase(cityName2)).count();
+        for(ContactDetails contact :contactList ){
+            count1 += count;
+        }
+            System.out.println("Contact List :" +count1);
+
+        }
+    /*
     Declaring The Add Contact Method
     If Duplicate Entry Is Possible It Prints Person Already Exists
     And Printing The Contact Details Of Person
