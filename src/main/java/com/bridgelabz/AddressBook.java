@@ -5,16 +5,22 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 public class AddressBook {
-    public String name;
+    private final String cityForMap;
+    public ArrayList<ContactDetails> name;
     Scanner sc = new Scanner(System.in);
+
+    public AddressBook(String cityForMap) {
+        this.cityForMap= cityForMap;
+    }
+
     /*
     Declaring The Add Contact Method
     And Entering The Contact Details By Using Scanner Class
     And Printing The Contact Details Of Person
      */
-    public AddressBook(String name) {
-        this.name = name;
-    }
+//    public AddressBook(String name) {
+//        this.name = name;
+//    }
     public ArrayList<ContactDetails> getAddressBook() {
         return contactList;
     }

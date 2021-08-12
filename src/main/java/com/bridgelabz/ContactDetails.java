@@ -18,7 +18,7 @@ public class ContactDetails {
     Declaring The Parametrised Constructor
     To Initialise The Parameters
     */
-    ContactDetails(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
+    public ContactDetails(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
