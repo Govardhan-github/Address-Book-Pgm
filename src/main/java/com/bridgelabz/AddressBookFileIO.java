@@ -19,9 +19,9 @@ public class AddressBookFileIO {
      */
     public void writeData(List<ContactDetails> personContactList) {
         StringBuffer empBuffer = new StringBuffer();
-        personContactList.forEach(employee-> {
-            String employeeDataString = employee.toString().concat("\n");
-            empBuffer.append(employeeDataString);
+        personContactList.forEach(contact-> {
+            String contactDataString = contact.toString().concat("\n");
+            empBuffer.append(contactDataString);
         });
         try{
             Files.write(Paths.get(CONTACT_FILE_NAME),empBuffer.toString().getBytes());
