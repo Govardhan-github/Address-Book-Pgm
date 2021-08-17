@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookFileIOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-13T03:12:27" hostname="DESKTOP-TK8JRTA" time="0.328">
+<testsuite name="AddressBookFileIOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-17T11:56:27" hostname="DESKTOP-TK8JRTA" time="0.066">
   <properties/>
-  <testcase name="givenContactDataItShouldBeWrittenIntoFile()" classname="AddressBookFileIOTest" time="0.328"/>
+  <testcase name="givenContactDataItShouldBeWrittenIntoFile()" classname="AddressBookFileIOTest" time="0.066"/>
   <system-out><![CDATA[Contact{firstName='GOPI', lastName='Reddy', address='KOdad', city='Hyderabad', state='Telangana', zip=508204, phoneNumber=9666110767, email='gopi@gamil.com'}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -58,8 +58,8 @@ public class AddressBookFileIOMain {
     public static void main(String[] args) {
         ArrayList<ContactDetails> personContactList = new ArrayList<>();
        AddressBookFileIOMain addressBookFileIOMain = new AddressBookFileIOMain(personContactList);
-        Scanner consoleInputReader = new Scanner(System.in);
-        addressBookFileIOMain.readContactData(consoleInputReader);
+//        Scanner consoleInputReader = new Scanner(System.in);
+//        addressBookFileIOMain.readContactData(consoleInputReader);
         addressBookFileIOMain.writeContactData(IOServices.FILE_IO);
     }
     /*
